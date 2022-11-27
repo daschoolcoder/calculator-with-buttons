@@ -1,13 +1,15 @@
 function calc() {
   const e = document.createElement("div");
   e.innerHTML = `<div id="body"> <div id="txt"><p id="log"> </p> </div> 
-<button id="1"> 1 </button> <button id="2"> 2 </button> <button id="3"> 3 </button> <button id="pi"> π </button> <button id="."> . </button>
+<button id="1"> 1 </button> <button id="2"> 2 </button> <button id="3"> 3 </button>  <button id="pi"> π </button> <button id="."> . </button>
 <br>
 <button id="4"> 4 </button> <button id="5"> 5 </button> <button id="6"> 6 </button> <button id="+"> + </button> <button id="-"> - </button>
 <br> 
 <button id="7"> 7 </button> <button id="8"> 8 </button> <button id="9"> 9 </button> <button id="*"> * </button> <button id="/"> / </button>
 <br>
-<button id="0"> 0 </button> <button id="enter"> Enter  </button> <button id="c"> Clear </button> </div>
+<button id="0"> 0 </button>  <button id="("> ( </button> <button id=")"> ) </button>
+<br>
+<button id="enter"> Enter  </button> <button id="c"> Clear </button> </div>
 `;
   document.body.appendChild(e);
   var Be = document.getElementById("enter");
@@ -31,8 +33,9 @@ function calc() {
     bD = document.getElementById("body"),
     pB = document.getElementById("pi"),
     txt = document.getElementById("txt"),
-    deB = document.getElementById(".");
-
+    deB = document.getElementById("."),
+    pr1 = document.getElementById("("),
+    pr2 = document.getElementById(")");
 
   bD.style = 'background-color:rgb(25,140,255);width:150px;height:160px;border-width:3px;'
   var n1 = "",
@@ -60,137 +63,102 @@ function calc() {
   dB.className = "opp";
 
   var answ;
-
-  var add, sub, mlt, div;
+  
+  pr1.onclick = function() {oP.innerHTML = oP.innerHTML + '(';
+  n1 = n1 + '(';
+  
+  }
+  
+  pr2.onclick = function() {oP.innerHTML = oP.innerHTML + ')';
+  n1 = n1 + ')';
+  
+  }
+  
   aB.onclick = function() {
-    add = true;
-    sub = false;
-    mlt = false;
-    div = false;
-    oC = true;
     oP.innerHTML = oP.innerHTML + '+';
+    n1 = n1 + '+';
+
   }
   sB.onclick = function() {
-    sub = true;
-    add = false;
-    mlt = false;
-    div = false;
-    oC = true;
     oP.innerHTML = oP.innerHTML + '-';
+    n1 = n1 + '-';
+
   }
   mB.onclick = function() {
-    mlt = true;
-    add = false;
-    sub = false;
-    div = false;
-    oC = true;
     oP.innerHTML = oP.innerHTML + '*';
+    n1 = n1 + '*';
+
   }
+
   dB.onclick = function() {
-    div = true;
-    add = false;
-    sub = false;
-    mlt = false;
-    oC = true;
     oP.innerHTML = oP.innerHTML + '/';
+    n1 = n1 + '/';
+
   }
+
+
 
   B1.onclick = function() {
     oP.innerHTML = oP.innerHTML + 1;
-    if (oC == true) {
-      n2 = n2 + 1;
-    } else if (oC == false) {
-      n1 = n1 + 1;
-    };
+    n1 = n1 + 1;
+
   }
   B2.onclick = function() {
     oP.innerHTML = oP.innerHTML + 2;
-    if (oC == true) {
-      n2 = n2 + 2;
-    } else if (oC == false) {
-      n1 = n1 + 2;
-    };
+    n1 = n1 + 2;
+
   }
   B3.onclick = function() {
     oP.innerHTML = oP.innerHTML + 3;
-    if (oC == true) {
-      n2 = n2 + 3;
-    } else if (oC == false) {
-      n1 = n1 + 3;
-    };
+    n1 = n1 + 3;
+
   }
   B4.onclick = function() {
     oP.innerHTML = oP.innerHTML + 4;
-    if (oC == true) {
-      n2 = n2 + 4;
-    } else if (oC == false) {
-      n1 = n1 + 4;
-    };
+    n1 = n1 + 4;
+
   }
   B5.onclick = function() {
     oP.innerHTML = oP.innerHTML + 5;
-    if (oC == true) {
-      n2 = n2 + 5;
-    } else if (oC == false) {
-      n1 = n1 + 5;
-    };
+    n1 = n1 + 5;
+
   }
   B6.onclick = function() {
     oP.innerHTML = oP.innerHTML + 6;
-    if (oC == true) {
-      n2 = n2 + 6;
-    } else if (oC == false) {
-      n1 = n1 + 6;
-    };
+    n1 = n1 + 6;
+
   }
   B7.onclick = function() {
     oP.innerHTML = oP.innerHTML + 7;
-    if (oC == true) {
-      n2 = n2 + 7;
-    } else if (oC == false) {
-      n1 = n1 + 7;
-    };
+    n1 = n1 + 7;
+
   }
   B8.onclick = function() {
     oP.innerHTML = oP.innerHTML + 8;
-    if (oC == true) {
-      n2 = n2 + 8;
-    } else if (oC == false) {
-      n1 = n1 + 8;
-    };
+    n1 = n1 + 8;
+
   }
   B9.onclick = function() {
     oP.innerHTML = oP.innerHTML + 9;
-    if (oC == true) {
-      n2 = n2 + 9;
-    } else if (oC == false) {
-      n1 = n1 + 9;
-    };
+    n1 = n1 + 9;
+
   }
   B0.onclick = function() {
     oP.innerHTML = oP.innerHTML + 0;
-    if (oC == true) {
-      n2 = n2 + 0;
-    } else if (oC == false) {
-      n1 = n1 + 0;
-    };
+    n1 = n1 + 0;
+
   }
+
   deB.onclick = function() {
     oP.innerHTML = oP.innerHTML + '.';
-    if (oC == true) {
-      n2 = n2 + '.';
-    } else if (oC == false) {
-      n1 = n1 + '.';
-    };
+    n1 = n1 + '.';
+
   }
 
   pB.onclick = function() {
     oP.innerHTML = oP.innerHTML + "π";
-    if (oC == true) {
-      n2 = n2 + 3.1415;
-    } else if (oC == false) {
-      n1 = n1 + 3.1415;
-    };
+
+    n1 = n1 + 3.1415;
   }
 
   cB.onclick = function() {
@@ -199,28 +167,12 @@ function calc() {
   }
 
   Be.onclick = function() {
-    let N1 = parseFloat(n1),
-      N2 = parseFloat(n2);
-    
- if (add == true) {
-      answ = N1 + N2;
-      oP.innerHTML = answ;
-    } else if (sub == true) {
-      answ = N1 - N2;
-      oP.innerHTML = answ;
-    } else if (mlt == true) {
-      answ = N1 * N2;
-      oP.innerHTML = answ;
-    } else if (div == true) {
-      answ = N1 / N2;
-      oP.innerHTML = answ;
-    }
-    
-    else { oP.innerHTML = 'Error num does not exist,or this is simply not added in yet';
+ 
+    oP.innerHTML = eval(n1);
+
+    if (oP.innerHTML == NaN) {
+      oP.innerHTML = 'Error num does not exist,or this is simply not added in yet';
     };
   };
 }
 calc();
-
-  
-
