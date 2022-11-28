@@ -1,5 +1,6 @@
 function calc() {
   const e = document.createElement("div");
+  
   e.innerHTML = `<div id="body">  </body>
   <p id="log"> </p> <div id="btns">
  <button id="1"> 1  </button> <button id="2"> 2 </button> <button id="3"> 3 </button>  <button id="pi"> π </button> <button id="."> . </button>
