@@ -8,3 +8,7 @@ a js and HTML calculator with buttons not typing
 -added pi and decimals
 
 -added 3+ step equations using eval()
+
+# v1.2
+
+-added varibles
