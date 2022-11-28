@@ -2,7 +2,6 @@
 a js and HTML calculator with buttons not typing
 
 # might create better visuals :/
-update log
 
 # v1.1
 
