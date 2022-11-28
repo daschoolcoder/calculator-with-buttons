@@ -4,7 +4,7 @@ a js and HTML calculator with buttons not typing
 # might create better visuals :/
 update log
 
-#v1.1
+# v1.1
 
 -added pi and decimals
 
